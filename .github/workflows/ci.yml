@@ -26,13 +26,13 @@ jobs:
         run: npm run lint
 
       - name: Enable Babel for Jest
-        run: mv babel.config.js.bak babel.config.js
+        run: mv babel.config.js
 
       - name: Run Unit Tests
         run: npm run test -- --coverage
 
       - name: Disable Babel for Next.js build
-        run: mv babel.config.js babel.config.js.bak
+        run: mv babel.config.js 
 
       - name: Build Next.js
         run: npm run build
